@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "bun run --bun next build",
-    "dev": "bun run --bun next dev",
-    "lint": "bun run --bun tsc --noEmit",
-    "start": "bun run --bun next start"
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "tsc --noEmit",
+    "start": "next start"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "1.1.23",
