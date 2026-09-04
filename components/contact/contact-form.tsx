@@ -1,44 +1,44 @@
-"use client"
+"use client";
 
-import { useMemo, useState } from "react"
-import { Loader2, Send } from "lucide-react"
+import { useMemo, useState } from "react";
+import { Loader2, Send } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { TurnstileWidget } from "@/components/contact/turnstile-widget"
-import { useUiFeedback } from "@/hooks/use-ui-feedback"
-import { profile } from "@/lib/content/profile"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { TurnstileWidget } from "@/components/contact/turnstile-widget";
+import { useUiFeedback } from "@/hooks/use-ui-feedback";
+import { profile } from "@/lib/content/profile";
 
-type FormState = "idle" | "loading" | "success" | "error"
+type FormState = "idle" | "loading" | "success" | "error";
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-const MIN_MESSAGE = 10
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MIN_MESSAGE = 10;
 
 /** Posts to /api/contact, which relays through Resend after a Turnstile check. */
 export function ContactForm() {
-  const [state, setState] = useState<FormState>("idle")
-  const [feedback, setFeedback] = useState<string | null>(null)
-  const [email, setEmail] = useState("")
-  const [body, setBody] = useState("")
-  const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
-  const { tap } = useUiFeedback()
+  const [state, setState] = useState<FormState>("idle");
+  const [feedback, setFeedback] = useState<string | null>(null);
+  const [email, setEmail] = useState("");
+  const [body, setBody] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const { tap } = useUiFeedback();
 
   const canSubmit = useMemo(
     () =>
       EMAIL_RE.test(email.trim()) &&
       body.trim().length >= MIN_MESSAGE &&
       Boolean(turnstileToken),
-    [email, body, turnstileToken]
-  )
+    [email, body, turnstileToken],
+  );
 
   const onSubmit = async (event: React.FormEvent) => {
-    event.preventDefault()
-    if (state === "loading" || !canSubmit) return
+    event.preventDefault();
+    if (state === "loading" || !canSubmit) return;
 
-    setState("loading")
-    setFeedback(null)
+    setState("loading");
+    setFeedback(null);
 
     try {
       const response = await fetch("/api/contact", {
@@ -49,26 +49,26 @@ export function ContactForm() {
           message: body.trim(),
           turnstileToken,
         }),
-      })
+      });
 
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}))
-        setState("error")
-        setFeedback(data?.error || "That didn't send. Try again in a moment.")
-        setTurnstileToken(null)
-        return
+        const data = await response.json().catch(() => ({}));
+        setState("error");
+        setFeedback(data?.error || "That didn't send. Try again in a moment.");
+        setTurnstileToken(null);
+        return;
       }
 
-      setState("success")
-      setFeedback("Message sent. I'll get back to you soon.")
-      setEmail("")
-      setBody("")
-      setTurnstileToken(null)
+      setState("success");
+      setFeedback("Message sent. I'll get back to you soon.");
+      setEmail("");
+      setBody("");
+      setTurnstileToken(null);
     } catch {
-      setState("error")
-      setFeedback("No connection. Check your network and try again.")
+      setState("error");
+      setFeedback("No connection. Check your network and try again.");
     }
-  }
+  };
 
   return (
     <form onSubmit={onSubmit} className="space-y-5" noValidate>
@@ -113,7 +113,7 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={state === "loading" || !canSubmit}
-          className="bg-foreground text-background h-11 w-full rounded-md text-sm font-semibold transition-opacity hover:opacity-90 disabled:opacity-45"
+          className="bg-foreground text-background h-11 w-full rounded-md text-sm font-semibold transition-opacity hover:opacity-90 disabled:opacity-45 cursor-pointer"
         >
           {state === "loading" ? (
             <>
@@ -153,7 +153,7 @@ export function ContactForm() {
         </div>
       </div>
     </form>
-  )
+  );
 }
 
-export default ContactForm
+export default ContactForm;
