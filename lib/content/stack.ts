@@ -8,6 +8,9 @@ export type StackCategory = {
    * `href` is kept as a reference but is deliberately not rendered - the
    * chips are buttons that go nowhere. Switch them back to links and it
    * is already here.
+   *
+   * Within a group, skills are ordered so the closest relatives sit
+   * next to each other (runtimes with runtimes, SQL with SQL, …).
    */
   skills: { title: string; href: string; icon: string }[]
 }
@@ -17,6 +20,11 @@ export const stack: StackCategory[] = [
     id: "01",
     category: "Languages",
     skills: [
+      {
+        title: "C#",
+        href: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+        icon: "csharp",
+      },
       {
         title: "TypeScript",
         href: "https://www.typescriptlang.org/",
@@ -39,13 +47,13 @@ export const stack: StackCategory[] = [
     category: "Frontend & Mobile",
     skills: [
       { title: "React.js", href: "https://react.dev/", icon: "react" },
-      { title: "Next.js", href: "https://nextjs.org/", icon: "nextdotjs" },
       {
         title: "React Native",
         href: "https://reactnative.dev/",
         icon: "react",
       },
       { title: "Expo", href: "https://expo.dev/", icon: "expo" },
+      { title: "Next.js", href: "https://nextjs.org/", icon: "nextdotjs" },
       {
         title: "Tailwind CSS",
         href: "https://tailwindcss.com/",
@@ -68,10 +76,21 @@ export const stack: StackCategory[] = [
     id: "03",
     category: "Backend & APIs",
     skills: [
+      { title: ".NET", href: "https://dotnet.microsoft.com/", icon: "dotnet" },
+      {
+        title: "ASP.NET Core",
+        href: "https://learn.microsoft.com/en-us/aspnet/core/",
+        icon: "dotnet",
+      },
+      {
+        title: "EF Core",
+        href: "https://learn.microsoft.com/en-us/ef/core/",
+        icon: "dotnet",
+      },
       { title: "Node.js", href: "https://nodejs.org/", icon: "nodedotjs" },
+      { title: "Bun", href: "https://bun.sh/", icon: "bun" },
       { title: "Express.js", href: "https://expressjs.com/", icon: "express" },
       { title: "Elysia", href: "https://elysiajs.com/", icon: "generic-server" },
-      { title: "Bun", href: "https://bun.sh/", icon: "bun" },
       {
         title: "REST APIs",
         href: "https://developer.mozilla.org/en-US/docs/Glossary/REST",
@@ -84,6 +103,7 @@ export const stack: StackCategory[] = [
         icon: "socketdotio",
       },
       { title: "BullMQ", href: "https://bullmq.io/", icon: "generic-queue" },
+      { title: "Hangfire", href: "https://www.hangfire.io/", icon: "generic-queue" },
       { title: "Inngest", href: "https://www.inngest.com/", icon: "generic-queue" },
     ],
   },
@@ -96,28 +116,28 @@ export const stack: StackCategory[] = [
         href: "https://www.postgresql.org/",
         icon: "postgresql",
       },
-      { title: "Redis", href: "https://redis.io/", icon: "redis" },
-      { title: "MongoDB", href: "https://www.mongodb.com/", icon: "mongodb" },
       { title: "SQLite", href: "https://www.sqlite.org/", icon: "sqlite" },
-      { title: "Drizzle ORM", href: "https://orm.drizzle.team/", icon: "drizzle" },
+      { title: "MongoDB", href: "https://www.mongodb.com/", icon: "mongodb" },
+      { title: "Redis", href: "https://redis.io/", icon: "redis" },
       { title: "Prisma", href: "https://www.prisma.io/", icon: "prisma" },
+      { title: "Drizzle ORM", href: "https://orm.drizzle.team/", icon: "drizzle" },
     ],
   },
   {
     id: "05",
     category: "DevOps & Infrastructure",
     skills: [
-      { title: "AWS", href: "https://aws.amazon.com/", icon: "generic-cloud" },
-      { title: "Docker", href: "https://www.docker.com/", icon: "docker" },
-      { title: "Turborepo", href: "https://turbo.build/", icon: "turborepo" },
-      { title: "Railway", href: "https://railway.com/", icon: "railway" },
-      { title: "Vercel", href: "https://vercel.com/", icon: "vercel" },
+      { title: "Git", href: "https://git-scm.com/", icon: "git" },
       {
         title: "GitHub Actions",
         href: "https://github.com/features/actions",
         icon: "githubactions",
       },
-      { title: "Git", href: "https://git-scm.com/", icon: "git" },
+      { title: "Docker", href: "https://www.docker.com/", icon: "docker" },
+      { title: "AWS", href: "https://aws.amazon.com/", icon: "generic-cloud" },
+      { title: "Railway", href: "https://railway.com/", icon: "railway" },
+      { title: "Vercel", href: "https://vercel.com/", icon: "vercel" },
+      { title: "Turborepo", href: "https://turbo.build/", icon: "turborepo" },
     ],
   },
   {

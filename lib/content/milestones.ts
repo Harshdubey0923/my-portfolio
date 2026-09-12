@@ -11,9 +11,9 @@ export type Achievement = {
 export type Stat = { value: string; label: string };
 
 export const stats: Stat[] = [
-  { value: "12,000+", label: "Registered users" },
-  { value: "1.36M+", label: "Page views" },
-  { value: "INR 60K+", label: "Revenue shipped" },
+  { value: "13,000+", label: "Registered users" },
+  { value: "1.5M+", label: "Page views" },
+  { value: "INR 70K+", label: "Revenue shipped" },
   { value: "2 yrs", label: "Work Experience" },
 ];
 

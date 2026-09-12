@@ -40,7 +40,7 @@ export const bio: { text: string; strong?: string[] }[] = [
     ],
   },
   {
-    text: "Built and shipped youth-af.com, a platform with 12,000+ registered users, 1.36M+ page views and INR 60,000+ in revenue.",
+    text: "Built and shipped youth-af.com, a platform with 13,000+ registered users, 1.5M+ page views and INR 70,000+ in revenue.",
     strong: ["youth-af.com"],
   },
 ];

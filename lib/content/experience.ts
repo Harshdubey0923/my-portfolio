@@ -18,13 +18,22 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    id: "cortekz",
+    company: "Cortekz",
+    role: "Full Stack Engineer",
+    location: "Remote, UK",
+    period: { start: "Sep 2026" },
+    isCurrent: true,
+    website: "https://www.cortekz.co.uk/",
+    logo: "/logos/cortekz.svg",
+  },
+  {
     id: "sk-agarwal",
     company: "SK Agarwal and Co Pvt. Ltd.",
     role: "Full Stack Engineer",
     location: "Haryana, India",
     period: { start: "Sep 2025", end: "Jun 2026" },
     project: "Earnex Rewards - multi-tenant loyalty platform",
-    isCurrent: true,
     highlights: [
       "Built the core architecture as five apps in one Turborepo monorepo - API server, admin dashboard, brand portal, marketing site and mobile app - sharing a single schema and validation layer, with separate customer, brand and admin schemas keeping auth and permissions isolated per persona.",
       "Replaced manual review with a six-stage automated receipt pipeline - LLM OCR, image authenticity checks, EXIF validation, duplicate detection and automated decisioning - each stage a tracked, independently auditable background job.",
@@ -42,6 +51,7 @@ export const experiences: Experience[] = [
       "AWS",
     ],
     logo: "/logos/skagarwal.jpeg",
+    website: "https://sksteel.in/",
   },
   {
     id: "nextfly",
@@ -64,5 +74,6 @@ export const experiences: Experience[] = [
       "Prisma",
     ],
     logo: "/logos/nextfly.jpeg",
+    website: "https://nextflytech.com/",
   },
 ];

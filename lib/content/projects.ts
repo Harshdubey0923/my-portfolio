@@ -43,9 +43,9 @@ export const projects: Project[] = [
     status: "live",
     metrics: [
       { value: "170K+", label: "Visitors" },
-      { value: "1.36M+", label: "Page views" },
-      { value: "12,000+", label: "Registered users" },
-      { value: "INR 60K+", label: "Revenue" },
+      { value: "1.5M+", label: "Page views" },
+      { value: "13,000+", label: "Registered users" },
+      { value: "INR 70K+", label: "Revenue" },
     ],
     image: "/project-images/youth-af.png",
   },

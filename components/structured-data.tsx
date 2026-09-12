@@ -25,7 +25,7 @@ export default function StructuredData() {
     alternateName: profile.handle,
     jobTitle: profile.title,
     description:
-      "Full Stack Engineer with 2 years of experience building production systems in TypeScript and Node.js - multi-tenant SaaS backends, AI-integrated data pipelines and real-time systems. Independently built and shipped youth-af.com to 11,000+ registered users.",
+      "Full Stack Engineer with 2 years of experience building production systems in TypeScript and Node.js - multi-tenant SaaS backends, AI-integrated data pipelines and real-time systems. Independently built and shipped youth-af.com to 13,000+ registered users.",
     url: siteUrl,
     image: `${siteUrl}${profile.avatar}`,
     email: `mailto:${profile.email}`,

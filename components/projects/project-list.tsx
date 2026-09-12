@@ -1,18 +1,19 @@
-"use client"
+"use client";
 
-import { useMemo, useState } from "react"
-import { Search, X } from "lucide-react"
+import { useMemo, useState } from "react";
+import { Search, X } from "lucide-react";
 
-import { PageHeader } from "@/components/layout/page-header"
-import { ProjectGrid } from "@/components/projects/project-grid"
-import { projects } from "@/lib/content/projects"
+import { PageHeader } from "@/components/layout/page-header";
+import { ProjectGrid } from "@/components/projects/project-grid";
+import { projects } from "@/lib/content/projects";
+import InteractiveDots from "../home/interactive-dots";
 
 export function ProjectList() {
-  const [query, setQuery] = useState("")
+  const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
-    const needle = query.trim().toLowerCase()
-    if (!needle) return projects
+    const needle = query.trim().toLowerCase();
+    if (!needle) return projects;
 
     return projects.filter((project) =>
       [
@@ -23,12 +24,13 @@ export function ProjectList() {
       ]
         .join(" ")
         .toLowerCase()
-        .includes(needle)
-    )
-  }, [query])
+        .includes(needle),
+    );
+  }, [query]);
 
   return (
     <main>
+      <InteractiveDots className="screen-line-bottom h-24 w-full sm:h-32" />
       <PageHeader
         eyebrow="Projects"
         title="Everything I've shipped"
@@ -62,7 +64,7 @@ export function ProjectList() {
 
       <ProjectGrid projects={filtered} />
     </main>
-  )
+  );
 }
 
-export default ProjectList
+export default ProjectList;
