@@ -1,10 +1,11 @@
 import { profile } from "./profile";
 
-export const siteUrl = "https://heyabhishek.in";
+// Update this to your real address after you deploy (for example your Vercel URL).
+export const siteUrl = "https://your-site.vercel.app";
 
-export const socialPreviewTitle = "Abhishek Singh | Full Stack Engineer";
+export const socialPreviewTitle = "Harsh Dubey | Junior Specialist";
 export const socialPreviewDescription =
-  "Abhishek Singh is a Full Stack Engineer building production systems in TypeScript and Node.js - multi-tenant SaaS backends, AI-integrated data pipelines and real-time systems.";
+  "Harsh Dubey is a Junior Specialist in Pune, India, supporting customers with IT services in ServiceNow, Microsoft Entra ID and Active Directory, and automating tasks with Python.";
 // The card image itself is no longer set here: app/opengraph-image.png and
 // app/twitter-image.png are the Next.js file-convention images for it, and
 // Next attaches the og:image/twitter:image tags to every page under app/
@@ -32,10 +33,10 @@ export const sectionIds = {
 export const skillsVenn = {
   image: profile.avatar,
   skills: {
-    top: "Multi-tenant SaaS",
-    left: "Backend Systems",
-    right: "AI Pipelines",
-    bottom: "Real-time\n& Infrastructure",
+    top: "ServiceNow ITSM",
+    left: "Identity & Access",
+    right: "Python Automation",
+    bottom: "Cloud Alert\nMonitoring",
   },
 };
 

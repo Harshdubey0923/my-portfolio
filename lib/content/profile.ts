@@ -1,26 +1,25 @@
 export const profile = {
-  name: "Abhishek Singh",
-  handle: "AbhishekSinghDev",
-  wordmark: "ABHISHEK",
-  title: "Full Stack Engineer",
+  name: "Harsh Dubey",
+  handle: "HarshDev",
+  wordmark: "HARSH",
+  title: "Junior Specialist",
   /** Rotated by the hero typewriter. */
-  roles: ["Full Stack Engineer", "AI Enthusiast"],
-  meta: "Delhi, IND",
-  location: "Delhi, India",
+  roles: ["Junior Specialist", "Exploring AI and Cloud"],
+  meta: "Pune, IND",
+  location: "Pune, India",
   timezone: "Asia/Kolkata",
   /**
    * Shown by default; the hero switch flips between this and the photo.
    * TODO: supply an illustrated avatar to give the switch two faces -
    * until then both sides show the same portrait.
    */
-  avatar: "/abhishek_vector.png",
-  avatarPhoto: "/abhishek.jpg",
-  email: "abhisheksingh.pf@gmail.com",
-  resumeUrl:
-    "https://drive.google.com/file/d/1kYBY3-0RtbzjOL4J1Sj04eYa1Q_QpBlV/view",
-  githubUsername: "AbhishekSinghDev",
-  xHandle: "AbhishekOG_Dev",
-  linkedinUrl: "https://www.linkedin.com/in/abhishek-singh-dev",
+  avatar: "/HarshAvatar.png",
+  avatarPhoto: "/Avatarphoto.jpeg",
+  email: "harshdubey0923@gmail.com",
+  resumeUrl: "https://drive.google.com/file/d/YOUR_FILE_ID/view",
+  githubUsername: "Harshdubey0923",
+  xHandle: "harshhun",
+  linkedinUrl: "https://www.linkedin.com/in/harsh-dubey-dev/",
   availability: "Available for opportunities",
 } as const;
 
@@ -30,18 +29,16 @@ export const profile = {
  */
 export const bio: { text: string; strong?: string[] }[] = [
   {
-    text: "I'm Abhishek, a Full Stack Engineer with 2 years of experience building production systems in TypeScript and Node.js.",
-    strong: ["TypeScript and Node.js"],
+    text: "I'm Harsh, a Junior Specialist with 1 year of experience supporting customers with IT services in ServiceNow, Microsoft Entra ID and Active Directory.",
+    strong: ["ServiceNow, Microsoft Entra ID and Active Directory"],
   },
   {
-    text: "I work on multi-tenant SaaS backends, AI-integrated data pipelines and real-time systems, with a focus on correctness, reliability and maintainability.",
-    strong: [
-      "multi-tenant SaaS backends, AI-integrated data pipelines and real-time systems",
-    ],
+    text: "I work on incident management, request management and alert monitoring for customers, with a focus on accuracy, reliability and clear communication.",
+    strong: ["incident management, request management and alert monitoring"],
   },
   {
-    text: "Built and shipped youth-af.com, a platform with 13,000+ registered users, 1.5M+ page views and INR 70,000+ in revenue.",
-    strong: ["youth-af.com"],
+    text: "I use Python to automate repetitive support tasks, and I'm building my skills in cloud and automation.",
+    strong: ["Python"],
   },
 ];
 

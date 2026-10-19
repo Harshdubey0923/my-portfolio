@@ -19,7 +19,7 @@ const directRoutes = [
   },
   {
     name: "DM me on LinkedIn",
-    detail: "in/abhishek-singh-dev",
+    detail: "in/harsh-dubey-dev",
     href: profile.linkedinUrl,
     icon: LinkedInIcon,
     primary: false,
