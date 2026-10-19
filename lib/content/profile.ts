@@ -16,7 +16,7 @@ export const profile = {
   avatar: "/HarshAvatar.png",
   avatarPhoto: "/Avatarphoto.jpeg",
   email: "harshdubey0923@gmail.com",
-  resumeUrl: "https://drive.google.com/file/d/YOUR_FILE_ID/view",
+  resumeUrl: "https://drive.google.com/file/d/1Y6ND5UVXmUcvVSCEHhIWqLKWmxZod38w/view",
   githubUsername: "Harshdubey0923",
   xHandle: "harshhun",
   linkedinUrl: "https://www.linkedin.com/in/harsh-dubey-dev/",
