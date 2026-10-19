@@ -1,11 +1,10 @@
 import { profile } from "./profile";
 
-// Update this to your real address after you deploy (for example your Vercel URL).
-export const siteUrl = "https://your-site.vercel.app";
+export const siteUrl = "https://harshdubey-portfolio.vercel.app";
 
 export const socialPreviewTitle = "Harsh Dubey | Junior Specialist";
 export const socialPreviewDescription =
-  "Harsh Dubey is a Junior Specialist in Pune, India, supporting customers with IT services in ServiceNow, Microsoft Entra ID and Active Directory, and automating tasks with Python.";
+  "Harsh Dubey is a Junior Specialist in Pune, India, supporting customers with IT services and automating tasks with Python.";
 // The card image itself is no longer set here: app/opengraph-image.png and
 // app/twitter-image.png are the Next.js file-convention images for it, and
 // Next attaches the og:image/twitter:image tags to every page under app/
