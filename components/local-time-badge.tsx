@@ -25,10 +25,10 @@ export function LocalTimeBadge() {
 
   return (
     <p className="text-muted-foreground mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
-      <span
-        className="size-1.5 rounded-full bg-emerald-500/80"
-        aria-hidden="true"
-      />
+      <span className="relative flex size-2" aria-hidden="true">
+        <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-500/70 motion-reduce:animate-none" />
+        <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+      </span>
       <span>{profile.availability}</span>
       {time && (
         <>
