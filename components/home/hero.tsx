@@ -3,6 +3,7 @@ import { Mail, Send } from "lucide-react"
 import { AvatarSwitch } from "@/components/home/avatar-switch"
 import { MagneticButton } from "@/components/common/magnetic-button"
 import { RoleCycle } from "@/components/home/role-cycle"
+import { LocalTimeBadge } from "@/components/local-time-badge"
 import { profile } from "@/lib/content/profile"
 
 /**
@@ -28,6 +29,8 @@ export function Hero() {
         <p className="flex min-h-6 items-center text-sm font-medium text-neutral-500/80 md:text-base dark:text-neutral-400">
           <RoleCycle roles={profile.roles} />
         </p>
+
+        <LocalTimeBadge />
 
         <div className="mt-2 flex flex-wrap items-center gap-2">
           <MagneticButton
