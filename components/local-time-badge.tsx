@@ -21,8 +21,6 @@ export function LocalTimeBadge() {
     return () => clearInterval(id);
   }, []);
 
-  const city = profile.location.split(",")[0];
-
   return (
     <p className="text-muted-foreground mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
       <span className="relative flex size-2" aria-hidden="true">
@@ -34,7 +32,7 @@ export function LocalTimeBadge() {
         <>
           <span aria-hidden="true">·</span>
           <span suppressHydrationWarning>
-            {time} in {city}
+            {time} in {profile.location}
           </span>
         </>
       )}
